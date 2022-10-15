@@ -52,3 +52,12 @@ termux-setup-storage
 ```
 - run this command on the tv, it will ask to allow for permissions
 
+rsync
+```
+rsync -rvz -e 'ssh -p 8022' --progress ~/tmp u0_a78@192.168.0.101:/storage/emulated/0/santhosh/vids
+```
+
+scp
+```
+scp -p 8022 /home/administrator/Downloads/termux-app_v0.118.0+github-debug_universal.apk u0_a78@192.168.0.101:/storage/emulated/0/santhosh
+```
