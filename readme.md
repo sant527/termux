@@ -40,3 +40,15 @@ logcat -s 'sshd:*'
 ssh -p 8022 u0_a78@192.168.0.101
 ```
 
+- add id_rsa.pub key to the termux .ssh/authorized_keys
+
+- to get access to storage
+> In order to have access to shared storage (/sdcard or /storage/emulated/0), Termux needs a storage access permission. It is not granted by default and is not requested on application startup since it is not necessary for normal application functioning.
+
+- Execute command 
+
+```
+termux-setup-storage
+```
+- run this command on the tv, it will ask to allow for permissions
+
