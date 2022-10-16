@@ -67,3 +67,20 @@ while inotifywait -r -e modify,create,delete,move ~/tmp; do
    rsync -rvz -e 'ssh -p 8022' --progress ~/tmp/ u0_a81@192.168.0.101:/storage/emulated/0/santhosh/vids
 done
 ```
+
+```
+tmux new -s rsync
+```
+
+```
+while inotifywait -r -e modify,create,delete,move ~/tmp; do
+   rsync -avu --delete -e 'ssh -p 8022' --progress ~/tmp/ u0_a81@192.168.0.101:/storage/emulated/0/santhosh/vids
+done
+```
+
+```
+- `-a` Do the sync preserving all filesystem attributes
+- `-v` run verbosely
+- `-u` only copy files with a newer modification time (or size difference if the times are equal)
+- `--delete` delete the files in target folder that do not exist in the source
+```
