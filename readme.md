@@ -62,3 +62,8 @@ scp
 scp -p 8022 /home/administrator/Downloads/termux-app_v0.118.0+github-debug_universal.apk u0_a78@192.168.0.101:/storage/emulated/0/santhosh
 ```
 
+```
+while inotifywait -r -e modify,create,delete,move ~/tmp; do
+   rsync -rvz -e 'ssh -p 8022' --progress ~/tmp/ u0_a81@192.168.0.101:/storage/emulated/0/santhosh/vids
+done
+```
