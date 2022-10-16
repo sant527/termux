@@ -37,7 +37,7 @@ logcat -s 'sshd:*'
 
 - from another pc access ssh inside termux
 ```
-ssh -p 8022 u0_a78@192.168.0.101
+ssh -p 8022 u0_a81@192.168.0.101
 ```
 
 - add id_rsa.pub key to the termux .ssh/authorized_keys
@@ -54,10 +54,11 @@ termux-setup-storage
 
 rsync
 ```
-rsync -rvz -e 'ssh -p 8022' --progress ~/tmp u0_a78@192.168.0.101:/storage/emulated/0/santhosh/vids
+rsync -rvz -e 'ssh -p 8022' --progress ~/tmp u0_a81@192.168.0.101:/storage/emulated/0/santhosh/vids
 ```
 
 scp
 ```
 scp -p 8022 /home/administrator/Downloads/termux-app_v0.118.0+github-debug_universal.apk u0_a78@192.168.0.101:/storage/emulated/0/santhosh
 ```
+
