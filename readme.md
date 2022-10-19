@@ -70,6 +70,8 @@ done
 
 ```
 tmux new -s rsync
+
+tmux a -t rsync
 ```
 
 ```
