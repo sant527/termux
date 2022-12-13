@@ -1,5 +1,16 @@
 - install termux not from google play but download apk or fdroid
 
+https://github.com/termux/termux-app/releases
+
+- upgrade and update
+
+```
+apt upgrade && apt update
+
+or
+
+pkg upgrade && pkg update
+```
 - install sshd
 
 ```
