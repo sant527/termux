@@ -97,3 +97,20 @@ done
 - `-u` only copy files with a newer modification time (or size difference if the times are equal)
 - `--delete` delete the files in target folder that do not exist in the source
 ```
+
+
+
+# install yt-dlp on termux
+
+```
+pkg install python
+```
+```
+python3 -m pip install -U yt-dlp
+```
+
+# install vim
+
+```
+pkg install vim
+```
