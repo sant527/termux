@@ -264,3 +264,13 @@ du -ah /storage/emulated/0 --max-depth=1 | sort -hr
 # check the sapce of all mounted
 df -h
 ```
+
+
+# install mpv
+```
+for mpv scripts to work use app-api29-universal-debug.apk  app
+
+and add
+
+script=/sdcard/path/to/script.lua
+```
