@@ -321,4 +321,15 @@ yt-dlp --continue --cookies ~/.public_html/youtube_cookies/youtube.com_cookies.t
 
 
 scp -P 8022 /storage/emulated/0/tmp/${filename} u0_a52@192.168.0.100:/storage/emulated/0/tmp/${filename}
+
+
+
+and then delete all the files:
+```
+ssh -p 8022 u0_a52@192.168.0.100<<'ENDSSH'
+set -x -o verbose;
+rm -rf /storage/emulated/0/tmp/*;
+set +x;
+ENDSSH
+```
 ```
