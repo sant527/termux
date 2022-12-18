@@ -150,7 +150,7 @@ uid=$(id -u simha)  (to mount as current user
 
 cd /mnt/redmi_termux
 
-sudo unmount /mnt/redmi_termux
+sudo umount /mnt/redmi_termux
 ```
 
 
