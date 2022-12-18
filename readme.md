@@ -153,7 +153,35 @@ cd /mnt/redmi_termux
 sudo umount /mnt/redmi_termux
 ```
 
+# ssh key gen
 
+```
+ $ ssh-keygen       
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/simha/.ssh/id_rsa): /home/simha/.ssh/id_rsa_redmi10power_termux       
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/simha/.ssh/id_rsa_redmi10power_termux
+Your public key has been saved in /home/simha/.ssh/id_rsa_redmi10power_termux.pub
+The key fingerprint is:
+SHA256:wG7sNGwl0YaB4ZbzhVvm2sfTOZqzVmXycUDkRcBy8Uk simha@NWLT2218
+The key's randomart image is:
++---[RSA 3072]----+
+|    .oo+     +=Eo|
+|   ..o.oo   ..=o.|
+|    = =.=    o.o.|
+|   . * X    . + .|
+|      @ S    = o |
+|     = + . ....  |
+|      o . +.+    |
+|         .o+ .   |
+|         .+o     |
++----[SHA256]-----+
 
+ $ cat ~/.ssh/id_rsa_redmi10power_termux.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwh9cw88EYXRiGHzDj0UCiN2yg/uWO40hD4ilMkq547YVVUXjZCKTOoOb4FVfCmYC2b4nsdArMbEavo+1GlQ2dP5FAssEa8tYADlbxDcrKYXNLU/akTN0SnoEyMERhkfltXEbqOrPwZYz7u/xrPkA4ZlpDN/SUMC4ZLNnQNREzCDLTyPQs08Iy4IPzgMDrl0UC/KyaX9Cd7cLCaBIIENX7NBChdnicOjoStCG3mBAkQWJE8UXj5E5I4QaeI21kcUv3B/zbjL9YNANEPtSoHEhcvSbQOxtFve990htKLfqOfxvvWS2NuMSTprjAnOTm5IVujXx5hqkONvY6xgXTuDoo/INEIS9aQSSOk1y1Pkqn5rNYn+pQMupXpQNzXc+aR+8ZZlSJOjodMA/giBPAuH5CwIOVo2ZOE1gEw5TIocShbPKERPqD2VlW5FklH+qiR5faRhqoTV3oy0+dN8hu4YB6DndHG9tbt+40BIQ4i1bmKjaO1IE04V5IFQCqZtdxbWk= simha@NWLT2218
 
+# on termux put the above in this file
+~ $ vi ~/.ssh/authorized_keys
 
+```
