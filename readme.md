@@ -126,3 +126,24 @@ apt install iproute2
 ip addr
 ```
 
+# connect to termux
+```
+ssh u0_a309@192.168.55.104 -p 8022
+```
+
+# install task-spooler
+
+```
+apt install task-spooler
+
+eg: ts yt-dlp youtube.com/link
+```
+
+# mount redmi using sshfs
+```
+sudo mkdir /mnt/redmi_termux
+sudo sshfs -o allow_other,default_permissions u0_a309@192.168.55.104:/data/data/com.termux/files/home /mnt/redmi_termux/
+```
+
+
+
