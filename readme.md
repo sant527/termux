@@ -190,3 +190,25 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwh9cw88EYXRiGHzDj0UCiN2yg/uWO40hD4ilMkq54
 ~ $ vi ~/.ssh/authorized_keys
 
 ```
+
+
+# install zsh
+```
+apt install zsh
+
+chsh -s zsh
+
+# create empty file
+touch ~/.zshrc
+
+# install wget
+apt install wget
+
+# install git
+apt install git
+
+# install oh-my-zsh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+and replace theme as aussiegeek
+```
