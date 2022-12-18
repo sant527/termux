@@ -114,3 +114,15 @@ python3 -m pip install -U yt-dlp
 ```
 pkg install vim
 ```
+
+
+# install iproute2 for ip command
+```
+apt install iproute2
+```
+
+# check ip address
+```
+ip addr
+```
+
