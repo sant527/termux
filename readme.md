@@ -239,4 +239,17 @@ cd ~/.public_html/django_download/download &&  ~/.public_html/django_download/ve
 
 ```
 pkg install tmux
+
+# create a new session
+tmux
+
+# attach to the recent session
+tmux a
+
+# create windows
+ctrl + b, c
+
+# list all windows
+ctrl + b, w
 ```
+
