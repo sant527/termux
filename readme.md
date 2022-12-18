@@ -142,22 +142,15 @@ eg: ts yt-dlp youtube.com/link
 # mount redmi using sshfs
 ```
 sudo mkdir /mnt/redmi_termux
-sudo sshfs -odebug,sshfs_debug,loglevel=debug -o port=8022,uid=$(id -u simha),gid=$(id -g simha),allow_other,default_permissions u0_a309@192.168.55.104:/data/data/com.termux/files/home /mnt/test
-```
 
-- uncomment user_allow_other
+sudo sshfs -odebug,sshfs_debug,loglevel=debug -o port=8022,uid=$(id -u simha),gid=$(id -g simha),allow_other,default_permissions u0_a309@192.168.55.104:/data/data/com.termux/files/home /mnt/redmi_termux
 
-```
-sudo vi /etc/fuse.conf
+-o port=8022  (if using different port)
+uid=$(id -u simha)  (to mount as current user
 
-# /etc/fuse.conf - Configuration file for Filesystem in Userspace (FUSE)
+cd /mnt/redmi_termux
 
-# Set the maximum number of FUSE mounts allowed to non-root users.
-# The default is 1000.
-#mount_max = 1000
-
-# Allow non-root users to specify the allow_other or allow_root mount options.
-user_allow_other
+sudo unmount /mnt/redmi_termux
 ```
 
 
