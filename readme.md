@@ -309,3 +309,16 @@ rsync -rtvu source_folder/ destination_folder/
 ```
 rsync -rtvuc source_folder/ destination_folder/
 ```
+
+
+
+# getting filename, downloading and then scp
+
+```
+filename=`yt-dlp --get-filename --cookies ~/.public_html/youtube_cookies/youtube.com_cookies.txt --restrict-filenames --no-part --no-mtime -f "${format}" -o "${today}-%(title)s-%(id)s.%(ext)s" "${url}"`
+
+yt-dlp --continue --cookies ~/.public_html/youtube_cookies/youtube.com_cookies.txt --restrict-filenames --no-part --no-mtime --verbose -f "${format}" -o "${today}-%(title)s-%(id)s.%(ext)s" "${url}"
+
+
+scp -P 8022 /storage/emulated/0/tmp/${filename} u0_a52@192.168.0.100:/storage/emulated/0/tmp/${filename}
+```
