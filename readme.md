@@ -274,3 +274,38 @@ and add
 
 script=/sdcard/path/to/script.lua
 ```
+
+
+
+# rsync
+
+```
+apt install rsync
+
+apt install inotify-tools
+```
+
+```
+while inotifywait -r -e modify,create,delete,move /storage/emulated/0/tmp; do
+   rsync -rtvuc --delete -e 'ssh -p 8022' --progress /storage/emulated/0/tmp/ u0_a52@192.168.0.100:/storage/emulated/0/tmp/
+done
+```
+
+notice that I added a slash at the end, doing this prevents a new folder from being created
+
+- The parameter -r means recursive, this is, it will copy the contents of the source folder, as well as the contents of every folder inside it.
+- The parameter -t makes rsync preserve the modification times of the files that it copies from the source folder.
+- The parameter -v means verbose, this parameter will print information about the execution of the command, such as the files that are successfully transferred, so we can use this as a way to keep track of the progress of rsync.
+
+
+
+- In order to save bandwidth and time, we can avoid copying the files that we already have in the destination folder that have not been modified in the source folder. To do this, we can add the parameter -u to rsync, this will synchronize the destination folder with the source folder, this is where the delta-transfer algorithm enters. To synchronize two folders like this we use:
+
+```
+rsync -rtvu source_folder/ destination_folder/
+```
+- By default, rsync will take into consideration the date of modification of the file and the size of the file to decide whether the file or part of it needs to be transferred or if the file can be left alone, but we can instead use a hash to decide whether the file is different or not. To do this we need to use the -c parameter, which will perform a checksum in the files to be transferred. This will skip any file where the checksum coincides.
+
+```
+rsync -rtvuc source_folder/ destination_folder/
+```
