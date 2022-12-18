@@ -211,4 +211,25 @@ apt install git
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 and replace theme as aussiegeek
+
+# change the color .oh-my-zsh/themes/aussiegeek.zsh-theme
+
+PROMPT='$fg_bold[blue][ $fg[yellow]%t $fg_bold[blue]] $fg_bold[blue] [ $fg[yellow]%n@ANDROID_TERMUX:%~$(git_prompt_info)$fg[yellow]$(ruby_prompt_info)$fg_bold[blue] ]$reset_color
+ $ '
+# git theming
+ZSH_THEME_GIT_PROMPT_PREFIX="$fg_bold[green]("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")"
+ZSH_THEME_GIT_PROMPT_CLEAN="✔"
+ZSH_THEME_GIT_PROMPT_DIRTY="✗"
+```
+
+# installing the django server
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+
+# start the django server
+cd ~/.public_html/django_download/download &&  ~/.public_html/django_download/venv/bin/python3 manage.py runserver 0.0.0.0:8000```
 ```
