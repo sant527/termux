@@ -143,10 +143,15 @@ eg: ts yt-dlp youtube.com/link
 ```
 sudo mkdir /mnt/redmi_termux
 
-sudo sshfs -odebug,sshfs_debug,loglevel=debug -o port=8022,uid=$(id -u simha),gid=$(id -g simha),allow_other,default_permissions u0_a309@192.168.55.104:/data/data/com.termux/files/home /mnt/redmi_termux
+sudo sshfs -odebug,sshfs_debug,loglevel=debug -o port=8022,ssh_command='ssh -i ~/.ssh/id_rsa_redmi10power_termux.pub',uid=$(id -u simha),gid=$(id -g simha),allow_other,default_permissions u0_a309@192.168.55.104:/data/data/com.termux/files/home /mnt/redmi_termux
+
+the below options
 
 -o port=8022  (if using different port)
-uid=$(id -u simha)  (to mount as current user
+uid=$(id -u simha)  (to mount as different user other than root)
+gid=$(id -g simha)  (to mount as different group other than root)
+ssh_command='ssh -i ~/.ssh/id_rsa_redmi10power_termux.pub'  (to specify a different rsa pub key)
+-odebug,sshfs_debug,loglevel=debug  (to show more debugging)
 
 cd /mnt/redmi_termux
 
