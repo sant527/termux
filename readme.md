@@ -253,3 +253,14 @@ ctrl + b, c
 ctrl + b, w
 ```
 
+# check the space
+
+```
+# Sort directories w.r.t size
+du -ah /storage/emulated/0 --max-depth=1 | sort -hr
+```
+
+```
+# check the sapce of all mounted
+df -h
+```
