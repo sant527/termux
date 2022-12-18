@@ -143,7 +143,7 @@ eg: ts yt-dlp youtube.com/link
 ```
 sudo mkdir /mnt/redmi_termux
 
-sudo sshfs -odebug,sshfs_debug,loglevel=debug -o port=8022,ssh_command='ssh -i ~/.ssh/id_rsa_redmi10power_termux.pub',uid=$(id -u simha),gid=$(id -g simha),allow_other,default_permissions u0_a309@192.168.55.104:/data/data/com.termux/files/home /mnt/redmi_termux
+sudo sshfs -odebug,sshfs_debug,loglevel=debug -o port=8022,ssh_command='ssh -i ~/.ssh/id_rsa_redmi10power_termux',uid=$(id -u simha),gid=$(id -g simha),allow_other,default_permissions u0_a309@192.168.55.104:/data/data/com.termux/files/home /mnt/redmi_termux
 
 the below options
 
