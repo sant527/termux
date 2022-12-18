@@ -233,3 +233,10 @@ pip3 install -r requirements.txt
 # start the django server
 cd ~/.public_html/django_download/download &&  ~/.public_html/django_download/venv/bin/python3 manage.py runserver 0.0.0.0:8000```
 ```
+
+
+# install tmux
+
+```
+pkg install tmux
+```
