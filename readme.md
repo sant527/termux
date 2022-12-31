@@ -214,7 +214,7 @@ and replace theme as aussiegeek
 
 # change the color .oh-my-zsh/themes/aussiegeek.zsh-theme
 
-PROMPT='$fg_bold[blue][ $fg[yellow]%t $fg_bold[blue]] $fg_bold[blue] [ $fg[yellow]%n@ANDROID_TERMUX:%~$(git_prompt_info)$fg[yellow]$(ruby_prompt_info)$fg_bold[blue] ]$reset_color
+PROMPT='$fg_bold[blue][ $fg[yellow]%D{%c} $fg_bold[blue]] $fg_bold[blue] [ $fg[yellow]%n@XXXXXXXXXXX:%~$(git_prompt_info)$fg[yellow]$(ruby_prompt_info)$fg_bold[blue] ]$reset_color
  $ '
 # git theming
 ZSH_THEME_GIT_PROMPT_PREFIX="$fg_bold[green]("
