@@ -196,7 +196,19 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwh9cw88EYXRiGHzDj0UCiN2yg/uWO40hD4ilMkq54
 ```
 apt install zsh
 
+# for termux
+
 chsh -s zsh
+
+# for ubuntu
+
+sudo vim /etc/pam.d/chsh
+
+# then, comment auth       required   pam_shells.so
+# change the default shell
+
+sudo chsh $USER -s $(which zsh)
+sudo chsh -s /usr/bin/zsh
 
 # create empty file
 touch ~/.zshrc
@@ -221,6 +233,11 @@ ZSH_THEME_GIT_PROMPT_PREFIX="$fg_bold[green]("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_CLEAN="✔"
 ZSH_THEME_GIT_PROMPT_DIRTY="✗"
+
+# change the timezone to ist
+
+sudo timedatectl set-timezone Asia/Kolkata
+
 ```
 
 # installing the django server
