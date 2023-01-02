@@ -212,9 +212,9 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 
 and replace theme as aussiegeek
 
-# change the color .oh-my-zsh/themes/aussiegeek.zsh-theme
+# change the color, full time with timezone .oh-my-zsh/themes/aussiegeek.zsh-theme
 
-PROMPT='$fg_bold[blue][ $fg[yellow]%D{%c} $fg_bold[blue]] $fg_bold[blue] [ $fg[yellow]%n@XXXXXXXXXXX:%~$(git_prompt_info)$fg[yellow]$(ruby_prompt_info)$fg_bold[blue] ]$reset_color
+PROMPT='$fg_bold[blue][ $fg[yellow]%D{%c} $(date +%Z) $fg_bold[blue]] $fg_bold[blue] [ $fg[yellow]%n@i-063260b72430e0a8c:%~$(git_prompt_info)$fg[yellow]$(ruby_prompt_info)$fg_bold[blue] ]$reset_color
  $ '
 # git theming
 ZSH_THEME_GIT_PROMPT_PREFIX="$fg_bold[green]("
