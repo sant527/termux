@@ -350,3 +350,14 @@ set +x;
 ENDSSH
 ```
 ```
+
+
+# zsh start time and end time of the comand
+```
+  zmodload zsh/datetime
+  TIMEFMT='Total duration for %J: %*E'
+  preexec() strftime 'Start Time: %Y-%m-%dT%H:%M:%S%z'
+  precmd() strftime 'End Time: %Y-%m-%dT%H:%M:%S%z'
+  REPORTTIME=10
+```
+https://unix.stackexchange.com/a/627157
