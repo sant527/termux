@@ -2,10 +2,10 @@
 
 https://github.com/termux/termux-app/releases
 
-- upgrade and update
+- update and upgrade
 
 ```
-apt upgrade && apt update
+apt update && apt upgrade
 
 or
 
