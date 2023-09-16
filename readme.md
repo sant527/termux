@@ -243,12 +243,20 @@ sudo timedatectl set-timezone Asia/Kolkata
 # installing the django server
 
 ```
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip3 install -r requirements.txt
 
 # start the django server
-cd ~/.public_html/django_download/download &&  ~/.public_html/django_download/venv/bin/python3 manage.py runserver 0.0.0.0:8000```
+. ~/.public_html/django_download/.venv/bin/activate &&  cd ~/.public_html/django_download/download && ./manage.py runserver 0.0.0.0:8000
+```
+# modification in the django
+
+
+```
+use ts instead of tsp
+use /data/data/com.termux/files/home/  instea of /home/simha/
+ts zsh /data/data/com.termux/files/home/.public_html/shellflickr.sh $youurl
 ```
 
 
@@ -370,3 +378,7 @@ https://unix.stackexchange.com/a/627157
 pkg install uuid-utils
 pkg install aria2
 ```
+
+
+# How to Add Chrome Extensions on Android Using Kiwi Browser
+
