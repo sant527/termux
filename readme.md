@@ -361,3 +361,12 @@ ENDSSH
   REPORTTIME=10
 ```
 https://unix.stackexchange.com/a/627157
+
+
+
+# install uuidgen and aria2c
+
+```
+pkg install uuid-utils
+pkg install aria2
+```
