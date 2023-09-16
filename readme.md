@@ -109,6 +109,12 @@ pkg install python
 python3 -m pip install -U yt-dlp
 ```
 
+# install ffmpeg 
+
+```
+pkg install ffmpeg
+```
+
 # install vim
 
 ```
