@@ -396,7 +396,18 @@ pkg install android-tools (for adding adb)
 
 connect to adb using wireless debugging.
 ```
+
 see video
-[![Watch the video]](https://user-images.githubusercontent.com/107305601/190889466-f936b492-486c-4973-91f8-7bce7476eb5a.mp4)
+
+https://user-images.githubusercontent.com/107305601/190889466-f936b492-486c-4973-91f8-7bce7476eb5a.mp4
+
+also you have allow permissions in the develper section
+
+![image](https://github.com/sant527/termux/assets/6462531/d2bbb96f-ce70-4cd9-83e2-3326d50ddddf)
 
 
+and finally run
+
+```
+adb shell "settings put global settings_enable_monitor_phantom_procs false"
+```
