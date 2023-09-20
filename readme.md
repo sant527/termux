@@ -388,3 +388,15 @@ pkg install aria2
 
 # How to Add Chrome Extensions on Android Using Kiwi Browser
 
+
+# how to remove phantom-cached-and-empty-processes restriction
+
+```
+pkg install android-tools (for adding adb)
+
+connect to adb using wireless debugging.
+```
+see video
+[![Watch the video]](https://user-images.githubusercontent.com/107305601/190889466-f936b492-486c-4973-91f8-7bce7476eb5a.mp4)
+
+
